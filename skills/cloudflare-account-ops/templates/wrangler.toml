@@ -1,0 +1,44 @@
+# Known-good worker config for cloudflare_temp_email (deploy verified).
+# Copy to worker/wrangler.toml, replace <placeholders>, then `npx wrangler deploy`.
+name = "cloudflare_temp_email"
+main = "src/worker.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = [ "nodejs_compat" ]
+keep_vars = true
+routes = [
+	{ pattern = "<api-subdomain>.<your-domain>", custom_domain = true },
+]
+
+[vars]
+PREFIX = "tmp"
+DEFAULT_DOMAINS = ["<your-domain>"]
+DOMAINS = ["<your-domain>"]
+PASSWORDS = ["<site-password>"]
+ADMIN_PASSWORDS = ["<admin-password>"]
+ADMIN_CONTACT = "admin@<your-domain>"
+ENABLE_USER_CREATE_EMAIL = true
+DISABLE_ADMIN_PASSWORD_CHECK = false
+
+[triggers]
+crons = [ "0 0 * * *" ]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "temp-email-db"
+database_id = "<d1-uuid>"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "<kv-namespace-id>"
+
+[[unsafe.bindings]]
+name = "RATE_LIMITER"
+type = "ratelimit"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }
+
+# Uncomment AFTER building ../frontend/dist (pnpm build:pages, .env.prod with empty VITE_API_BASE):
+# [assets]
+# directory = "../frontend/dist/"
+# binding = "ASSETS"
+# run_worker_first = true
