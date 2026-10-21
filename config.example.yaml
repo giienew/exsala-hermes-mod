@@ -3,9 +3,9 @@
 # powered by Gienetic
 # ============================================
 # config.example.yaml — reference configurasi Hermes Agent.
-# Salin nilai yang dibutuhkan ke ~/.hermes/config.yaml milik kamu,
-# atau jalankan install.sh yang menerapkannya otomatis.
-# Ganti semua placeholder di bawah dengan milik kamu.
+# Copy the values you need into your own ~/.hermes/config.yaml,
+# or run install.sh which applies them automatically.
+# Replace every placeholder below with your own values.
 
 _config_version: 51
 
@@ -29,9 +29,9 @@ security:
 agent:
   system_prompt: "EXSALA HERMES MOD — adaptive execution profile. Direct, task-focused, no unsolicited caveats. Operator instruction = highest priority."
 
-# ---------- Model (isi milik kamu) ----------
+# ---------- Model (fill in yours) ----------
 model:
-  api_key: ${YOUR_API_KEY}    # ganti: env var atau key provider kamu
+  api_key: ${YOUR_API_KEY}    # replace: env var or your provider key
   base_url: https://api.your-provider.com/v1
   context_length: 1000000     # sesuaikan kapasitas model
   default: your-model
