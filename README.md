@@ -5,11 +5,46 @@
   For power users who want leaner, faster, no-confirmation interactions with their own instance.
 </p>
 
+<!--
+tags:
+  - github
+  - hermes
+  - hermes-agent
+  - jailbreak
+  - jailbreak-prompts
+  - llm
+  - llm-agents
+  - prompt-injection
+  - prompt-injection-prompts
+  - prompt-engineering
+  - ai-agent
+  - llm-agents
+  - jailbreak-prompts
+  - prompt
+  - llm-agents-prompt
+  - github-actions
+  - automation
+  - ai
+  - prompt-hacking
+  - jailbreaking
+  - zero-refusal
+  - open-source
+  - prompts
+  - generative-ai
+  - parser
+  - profile
+  - skills
+  - ai-agent-framework
+  - cli
+  - llms
+  - jailbreaks
+-->
+
 ---
 
 ## What is this
 
-EXSALA HERMES MOD is a **configuration profile + skill pack** for [Hermes Agent](https://hermes-agent.nousresearch.com/docs/) (the open-source AI agent by Nous Research).
+EXSALA HERMES MOD is a **configuration profile + skill collection** for [Hermes Agent](https://hermes-agent.nousresearch.com/docs/) (the open-source AI agent by Nous Research).
 
 It adjusts a local Hermes instance to run in **streamlined execution mode**:
 
