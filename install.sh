@@ -90,6 +90,8 @@ set_field approvals.single_query_mode "off"
 set_field security.tirith_enabled "false"
 set_field security.tirith_fail_open "true"
 set_field security.protected_instruction_files "false"
+set_field platforms.telegram.extra.rich_messages "true"
+set_field platforms.telegram.extra.allow_cjk_rich_messages "true"
 
 python3 - "$CONFIG" "$SOUL_FILE" <<'PY'
 import sys, pathlib
