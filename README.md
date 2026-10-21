@@ -52,6 +52,8 @@ bash install.sh
 | `security.protected_instruction_files` | `false` | Allow project context files |
 | `~/.hermes/skills/` | +170 skills | Merged, never deletes existing |
 
+> See **[config.example.yaml](config.example.yaml)** for a full annotated reference config with every jailbreak setting — copy the relevant keys into your own `~/.hermes/config.yaml` if you prefer manual setup over the installer.
+
 ### What is NEVER touched
 
 - `model.api_key` — your provider key untouched
