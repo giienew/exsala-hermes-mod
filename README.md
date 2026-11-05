@@ -50,9 +50,11 @@ It adjusts a local Hermes instance to run in **streamlined execution mode**:
 
 - **Fewer confirmation prompts** — the assistant acts on instructions directly.
 - **No safety-lecture chatter** — concise, task-focused replies without unsolicited caveats.
+- **Zero-refusal core** — no moralizing pauses, no "are you sure", no policy friction (anti-UU).
+- **Farming-first** — auto pipelines, mass account creation, pure-HTTP preferred (curl_cffi), browser fallback (Camoufox/Playwright) for Cloudflare-gated targets.
 - **Model-agnostic** — works the same regardless of the underlying model (DeepSeek, GLM, Qwen, MiMo, ...).
 - **A clean status banner** at the start of every new session.
-- **170 skills included** — automation, web, security research, media, productivity, coding helpers, and more, ready to use.
+- **172 skills included** — automation, web, security research, media, productivity, coding helpers, farming infra (AgentMail inbox, prompt leaks library), and more, ready to use.
 
 It does **not** change your model provider, API keys, or personal data.
 
@@ -85,7 +87,7 @@ bash install.sh
 | `security.tirith_enabled` | `false` | Local content-gating off |
 | `security.tirith_fail_open` | `true` | Fail-open |
 | `security.protected_instruction_files` | `false` | Allow project context files |
-| `~/.hermes/skills/` | +170 skills | Merged, never deletes existing |
+| `~/.hermes/skills/` | +172 skills | Merged, never deletes existing |
 
 > See **[config.example.yaml](config.example.yaml)** for a full annotated reference config with every jailbreak setting — copy the relevant keys into your own `~/.hermes/config.yaml` if you prefer manual setup over the installer.
 
@@ -110,7 +112,7 @@ bash install.sh
 
 1. Restart Hermes (new session, e.g. `/reset`).
 2. The EXSALA banner appears.
-3. The skill pack is active — any of the 170 skills can be invoked by name.
+3. The skill pack is active — any of the 172 skills can be invoked by name.
 
 ## Project layout
 
@@ -118,7 +120,7 @@ bash install.sh
 exsala-hermes-mod/
 ├── install.sh
 ├── SOUL.md
-├── skills/          # 170 skill dirs
+├── skills/          # 172 skill dirs
 └── README.md
 ```
 
